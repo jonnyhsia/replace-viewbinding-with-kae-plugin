@@ -1,1 +1,1 @@
-rootProject.name = "replace-viewbinding-with-kae-plugin"
+rootProject.name = "synthetics-to-viewbinding"

@@ -1,4 +1,4 @@
-package com.github.jonnyhsia.replaceviewbindingwithkaeplugin
+package com.github.jonnyhsia.synthetics2viewbinding
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

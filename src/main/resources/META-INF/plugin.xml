@@ -1,6 +1,6 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
-    <id>com.github.jonnyhsia.replaceviewbindingwithkaeplugin</id>
+    <id>com.github.jonnyhsia.synthetics2viewbinding</id>
     <name>Replace-View-Binding-with-Kae</name>
     <vendor>jonnyhsia</vendor>
 
@@ -9,19 +9,19 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <applicationService
-                serviceImplementation="com.github.jonnyhsia.replaceviewbindingwithkaeplugin.services.MyApplicationService"/>
+                serviceImplementation="com.github.jonnyhsia.synthetics2viewbinding.services.MyApplicationService"/>
         <projectService
-                serviceImplementation="com.github.jonnyhsia.replaceviewbindingwithkaeplugin.services.MyProjectService"/>
+                serviceImplementation="com.github.jonnyhsia.synthetics2viewbinding.services.MyProjectService"/>
     </extensions>
 
     <applicationListeners>
-        <listener class="com.github.jonnyhsia.replaceviewbindingwithkaeplugin.listeners.MyProjectManagerListener"
+        <listener class="com.github.jonnyhsia.synthetics2viewbinding.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
 
     <actions>
         <action id="ReplaceAction"
-                class="com.github.jonnyhsia.replaceviewbindingwithkaeplugin.ReplaceAction"
+                class="com.github.jonnyhsia.synthetics2viewbinding.action.Synthetics2ViewBindingAction"
                 text="ReplaceAction">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>

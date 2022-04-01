@@ -1,6 +1,6 @@
 <!-- Keep a Changelog guide -> https://keepachangelog.com -->
 
-# replace-viewbinding-with-kae-plugin Changelog
+# synthetics-to-viewbinding Changelog
 
 ## [Unreleased]
 ### Added

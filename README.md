@@ -1,4 +1,4 @@
-# replace-viewbinding-with-kae-plugin
+# synthetics-to-viewbinding
 
 ![Build](https://github.com/jonnyhsia/replace-viewbinding-with-kae-plugin/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
@@ -26,7 +26,7 @@ To keep everything working, do not remove `<!-- ... -->` sections.
 
 - Using IDE built-in plugin system:
   
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "replace-viewbinding-with-kae-plugin"</kbd> >
+  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "synthetics-to-viewbinding"</kbd> >
   <kbd>Install Plugin</kbd>
   
 - Manually:
