@@ -6,5 +6,8 @@ package com.github.jonnyhsia.synthetics2viewbinding
  */
 object Const {
     internal const val POSTFIX_BINDING = "Binding"
-    internal const val SYNTHETICS_IMPORT = "kotlinx.synthetics"
+    internal const val SYNTHETICS_IMPORT = "import kotlinx.android.synthetic"
+    internal const val FUNC_LAYOUT_ID = "getLayoutId"
+
+    internal const val BINDING_PKG = "%s.databinding.%s" // module_package.databinding.XXXBinding
 }

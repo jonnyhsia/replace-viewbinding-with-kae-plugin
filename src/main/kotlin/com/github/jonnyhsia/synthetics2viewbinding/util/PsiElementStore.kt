@@ -9,5 +9,5 @@ import com.intellij.psi.PsiElement
 interface PsiElementStore {
     var pkg: PsiElement?
     var imports: PsiElement?
-    var kclass: PsiElement?
+    var kclass: Set<PsiElement>
 }
