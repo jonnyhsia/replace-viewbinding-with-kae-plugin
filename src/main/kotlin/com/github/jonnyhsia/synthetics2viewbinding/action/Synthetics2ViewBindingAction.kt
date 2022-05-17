@@ -4,10 +4,12 @@ import com.github.jonnyhsia.synthetics2viewbinding.Const
 import com.github.jonnyhsia.synthetics2viewbinding.util.IReplaceClass
 import com.github.jonnyhsia.synthetics2viewbinding.util.IReplaceFile
 import com.intellij.openapi.actionSystem.AnActionEvent
+import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.util.containers.mapSmartSet
 import org.jetbrains.kotlin.psi.KtClass
 import org.jetbrains.kotlin.psi.KtImportDirective
 import org.jetbrains.kotlin.psi.KtImportList
+import org.jetbrains.kotlin.resolve.ImportPath
 
 /**
  * Created by JonnyHsia on 22/4/1.
@@ -49,6 +51,10 @@ class Synthetics2ViewBindingAction : BaseAction(), IReplaceFile {
             // kotlinx.android.synthetic.demo_activity
             // kotlinx.android.synthetic.demo_activity.textView
             it.importedFqName.toString()
+        }
+        WriteCommandAction.runWriteCommandAction(project) {
+            val i = ktPsiFactory.createImportDirective(ImportPath.fromString("com.jonnyhsia.demo.dataBinding.viewBinding"))
+            (imports as KtImportList).add(i)
         }
     }
 
@@ -105,7 +111,7 @@ class Synthetics2ViewBindingAction : BaseAction(), IReplaceFile {
     override fun clearSynthetics() {
         runWriteCommandAction {
             syntheticsImports.forEach {
-                it.delete()
+//                it.delete()
             }
         }
     }

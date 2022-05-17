@@ -9,6 +9,7 @@ import com.intellij.openapi.command.WriteCommandAction
 import org.jetbrains.kotlin.psi.KtClass
 import org.jetbrains.kotlin.psi.KtClassBody
 import org.jetbrains.kotlin.psi.KtPackageDirective
+import org.jetbrains.kotlin.psi.getOrCreateBody
 import org.jetbrains.kotlin.resolve.ImportPath
 
 class Synthetics2ViewBindingInKClass(
@@ -76,6 +77,13 @@ class Synthetics2ViewBindingInKClass(
     }
 
     override fun addViewBindingProperty() {
+        val bindingProperty = file.ktPsiFactory.createProperty("private val binding by viewBinding { $bindingName() }")
+        // val block = file.ktPsiFactory.createBlock("val binding by viewBinding { $bindingName() }")
+
+        WriteCommandAction.runWriteCommandAction(file.project) {
+            element.addBefore(bindingProperty, element.body?.declarations?.firstOrNull())
+//            element.addBefore(block, element.body?.declarations?.firstOrNull())
+        }
     }
 
     override fun replaceSyntheticsViewWithViewBinding() {
